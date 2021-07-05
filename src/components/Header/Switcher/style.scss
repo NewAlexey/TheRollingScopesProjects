@@ -1,0 +1,35 @@
+input[type='checkbox'] {
+  visibility: hidden;
+  &:checked + label {
+    &:before {
+      transform: translateX(60px);
+    }
+  }
+}
+
+label {
+  display: flex;
+  width: 100px;
+  height: 32px;
+  border: 2px solid;
+  border-radius: 99em;
+  position: relative;
+  transition: transform 0.4s ease-in-out;
+  transform-origin: 50% 50%;
+  cursor: pointer;
+  border-color: #fff600;
+  background: linear-gradient(270deg, #0099ae 0%, #00bf82 100%);
+
+  &:before {
+    transition: transform 0.4s ease;
+    content: '';
+    display: block;
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    background-color: #fff600;
+    border-radius: 50%;
+    top: 5px;
+    left: 10px;
+  }
+}
